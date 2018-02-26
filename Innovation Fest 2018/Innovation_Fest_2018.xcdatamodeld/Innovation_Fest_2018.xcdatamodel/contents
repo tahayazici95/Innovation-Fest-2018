@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Saved_marks" representedClassName="Saved_marks" syncable="YES" codeGenerationType="class">
+        <attribute name="enterp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="innovation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inspiration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teamwork" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Saved_marks" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>
