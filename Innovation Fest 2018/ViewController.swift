@@ -50,8 +50,25 @@ class ViewController: UIViewController {
             let navigation_object = UINavigationController(rootViewController: next)
             self.present(navigation_object, animated: true, completion: nil)
             print("user exsist")
-        }else{
-            print("sdnjshdjf")
+            
+        }else if (usernameTextField.text! == "" || passwordTextField.text! == ""){
+            
+            let alert = UIAlertController(title: "", message: "\nPlease enter your Username and Password", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in })
+            
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+            //print("sdnjshdjf")
+            
+        }else {
+            
+            let alert = UIAlertController(title: "Login Error", message: "\nUsername or Password is inncorect. Please Re-enter.", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: {(action) -> Void in })
+            
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
