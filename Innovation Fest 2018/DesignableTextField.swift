@@ -18,15 +18,18 @@ class DesignableTextField: UITextField {
     }
     
     func updateView() {
-        
         if let image = leftImage {
             leftViewMode = .always
             
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            let imageView = UIImageView(frame: CGRect(x: 5, y: 0, width: 20, height: 20))
             imageView.image = image
             
-            leftView = imageView
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+            view.addSubview(imageView)
+            
+            leftView = view
         } else {
+            // Image is nill
             leftViewMode = .never
         }
     }

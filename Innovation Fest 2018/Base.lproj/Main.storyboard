@@ -568,6 +568,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="User Icon"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBx-vA-fId" customClass="DesignableTextField" customModule="Innovation_Fest_2018" customModuleProvider="target">
                                 <rect key="frame" x="29" y="426" width="356" height="30"/>
@@ -578,6 +581,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="Lock Icon"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqw-Ux-y7Q">
                                 <rect key="frame" x="29" y="400" width="79" height="21"/>
@@ -677,7 +683,9 @@
         <image name="Computer Science Chip" width="360" height="640"/>
         <image name="Designing Projects" width="521" height="320"/>
         <image name="Lines of Code" width="360" height="640"/>
+        <image name="Lock Icon" width="233" height="233"/>
         <image name="Logo" width="80" height="80"/>
+        <image name="User Icon" width="233" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6kX-5Z-qAa"/>
