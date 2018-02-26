@@ -31,6 +31,11 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.title.text = ViewController.users[indexPath.row].title
         
+        cell.image_view.layer.cornerRadius = cell.image_view.frame.size.width/2
+        cell.image_view.clipsToBounds = true
+        
+        cell.title.layer.cornerRadius = cell.title.frame.size.width/2
+        
         if let imageURL = URL(string: ViewController.users[indexPath.row].logo){
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
