@@ -60,6 +60,7 @@ class navScreenVC: UIViewController {
         }
     }
     
+    
     // This will be navigation to the Floor Map when I receive the map layout from Rehan
     @IBAction func panBottonCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
