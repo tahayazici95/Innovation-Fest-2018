@@ -47,8 +47,10 @@
                                     <constraint firstItem="F1d-4P-Zrg" firstAttribute="top" secondItem="ptW-73-NUu" secondAttribute="top" constant="55" id="5XN-2p-Cd2"/>
                                     <constraint firstItem="MFn-8m-HoT" firstAttribute="leading" secondItem="ptW-73-NUu" secondAttribute="leading" constant="59" id="8jv-U7-lTL"/>
                                     <constraint firstAttribute="bottom" secondItem="F1d-4P-Zrg" secondAttribute="bottom" constant="15" id="ACT-fu-bug"/>
+                                    <constraint firstAttribute="height" constant="270" id="FH3-xZ-u1q"/>
                                     <constraint firstItem="F1d-4P-Zrg" firstAttribute="leading" secondItem="ptW-73-NUu" secondAttribute="leading" constant="15" id="ae8-gp-LTT"/>
                                     <constraint firstItem="MFn-8m-HoT" firstAttribute="centerX" secondItem="F1d-4P-Zrg" secondAttribute="centerX" id="kyZ-v4-cpU"/>
+                                    <constraint firstAttribute="width" constant="358" id="otm-FU-cYU"/>
                                     <constraint firstAttribute="trailing" secondItem="F1d-4P-Zrg" secondAttribute="trailing" constant="15" id="xj6-q1-7E7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -87,7 +89,9 @@
                                     <constraint firstItem="k4K-lP-nFL" firstAttribute="centerX" secondItem="ZFr-Of-KVo" secondAttribute="centerX" id="GXm-vO-OUm"/>
                                     <constraint firstItem="k4K-lP-nFL" firstAttribute="leading" secondItem="ZFr-Of-KVo" secondAttribute="leading" constant="15" id="HdY-P8-9dY"/>
                                     <constraint firstAttribute="bottom" secondItem="k4K-lP-nFL" secondAttribute="bottom" constant="15" id="I3E-EA-2CR"/>
+                                    <constraint firstAttribute="width" constant="358" id="MIg-XR-0yB"/>
                                     <constraint firstItem="Azw-oO-qix" firstAttribute="centerX" secondItem="k4K-lP-nFL" secondAttribute="centerX" id="UDV-Uj-i21"/>
+                                    <constraint firstAttribute="height" constant="270" id="hbL-Kt-xhF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
