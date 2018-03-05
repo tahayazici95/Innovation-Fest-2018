@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Computer Science Cave" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-f6-GrD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Vectors" translatesAutoresizingMaskIntoConstraints="NO" id="hwz-f6-GrD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptW-73-NUu" userLabel="Top Card">
@@ -36,11 +36,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe for Project List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-8m-HoT">
                                         <rect key="frame" x="59" y="8" width="240" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.40784313725490196" green="0.40781933069229126" blue="0.40781933069229126" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="MFn-8m-HoT" firstAttribute="top" secondItem="ptW-73-NUu" secondAttribute="topMargin" id="4BH-nK-eul"/>
@@ -76,7 +76,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe for Project Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azw-oO-qix">
                                         <rect key="frame" x="59" y="8" width="240" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.5450980392" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -683,13 +683,13 @@
     <resources>
         <image name="BCU City Centre Map" width="360" height="321"/>
         <image name="Circuit Board" width="360" height="640"/>
-        <image name="Computer Science Cave" width="360" height="640"/>
         <image name="Computer Science Chip" width="360" height="640"/>
         <image name="Designing Projects" width="521" height="320"/>
         <image name="Lines of Code" width="360" height="640"/>
         <image name="Lock Icon" width="233" height="233"/>
         <image name="Logo" width="80" height="80"/>
         <image name="User Icon" width="233" height="233"/>
+        <image name="White Vectors" width="360" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6kX-5Z-qAa"/>
