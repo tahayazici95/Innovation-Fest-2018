@@ -291,7 +291,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xih-Gq-lym">
-                                            <rect key="frame" x="20" y="535" width="374" height="150"/>
+                                            <rect key="frame" x="20" y="535" width="85.666666666666671" height="150"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -333,13 +333,13 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Xih-Gq-lym" firstAttribute="trailing" secondItem="PvS-yL-6oA" secondAttribute="trailing" id="0KK-uL-yhc"/>
                                         <constraint firstItem="Xih-Gq-lym" firstAttribute="leading" secondItem="PvS-yL-6oA" secondAttribute="leading" id="BoL-wh-IfD"/>
                                         <constraint firstItem="PvS-yL-6oA" firstAttribute="centerY" secondItem="cHQ-lt-0lf" secondAttribute="centerY" constant="14.5" id="C9K-qM-fi1"/>
                                         <constraint firstItem="PvS-yL-6oA" firstAttribute="centerX" secondItem="cHQ-lt-0lf" secondAttribute="centerX" id="GLC-pd-MR6"/>
-                                        <constraint firstItem="B8x-Ly-OTg" firstAttribute="leading" secondItem="9Gp-3I-qVL" secondAttribute="trailing" constant="33" id="JPW-Q0-dmF"/>
+                                        <constraint firstItem="B8x-Ly-OTg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9Gp-3I-qVL" secondAttribute="trailing" constant="8" symbolic="YES" id="JPW-Q0-dmF"/>
                                         <constraint firstItem="9Gp-3I-qVL" firstAttribute="top" secondItem="PvS-yL-6oA" secondAttribute="bottom" constant="8" symbolic="YES" id="KMH-FJ-KmG"/>
                                         <constraint firstItem="9Gp-3I-qVL" firstAttribute="leading" secondItem="cHQ-lt-0lf" secondAttribute="leadingMargin" constant="12" id="Ljr-KT-rce"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xih-Gq-lym" secondAttribute="trailing" constant="20" symbolic="YES" id="XUL-Cb-gfy"/>
                                         <constraint firstItem="k5K-hN-O87" firstAttribute="leading" secondItem="cHQ-lt-0lf" secondAttribute="leading" id="jBr-eN-tCH"/>
                                         <constraint firstItem="PvS-yL-6oA" firstAttribute="leading" secondItem="cHQ-lt-0lf" secondAttribute="leading" constant="20" id="nDX-UP-q2l"/>
                                         <constraint firstItem="B8x-Ly-OTg" firstAttribute="top" secondItem="9Gp-3I-qVL" secondAttribute="top" id="oIP-ja-Ved"/>

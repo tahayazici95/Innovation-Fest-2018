@@ -19,8 +19,17 @@ class markGiverVC: UIViewController {
     @IBOutlet weak var textBox2: UITextField!
     @IBOutlet weak var textBox3: UITextField!
     @IBOutlet weak var textBox4: UITextField!
+
+    var saved_data = CoreDataHandler.fetchObject()
     
     @IBAction func submissionButton(_ sender: UIButton) {
+        
+        
+        if let i = saved_data?.index(where: { $0.title == listDetailsVC.project_title }) {
+            CoreDataHandler.deleteObject(saved_p: saved_data![i])
+            
+            print("Deleted")
+        }
         
         // Save the marks given
         CoreDataHandler.saveObject(title: listDetailsVC.project_title,
@@ -43,16 +52,5 @@ class markGiverVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
