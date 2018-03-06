@@ -34,7 +34,7 @@ class listDetailsVC: UIViewController {
                         // Display as pop-up text the given marks from before
                         let alert = UIAlertController(title: "Marks",
                                                       message: "\n\(i.title!)\nInspiration: \(i.inspiration!)" +
-                                                               "\nInnovation: \(i.innovation!):" +
+                                                               "\nInnovation: \(i.innovation!)" +
                                                                "\nEntrepreneurship: \(i.enterp!)" +
                                                                "\nTeamwork: \(i.teamwork!)",
                                                       preferredStyle: .alert)
