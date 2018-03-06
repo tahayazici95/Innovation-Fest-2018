@@ -25,6 +25,7 @@ class listDetailsVC: UIViewController {
         let saved_data =   CoreDataHandler.fetchObject()
         
         // Iterate through the marks to get the desired one
+        var isFound = false
         for i in saved_data!{
             print(i.title!)
             
@@ -32,8 +33,8 @@ class listDetailsVC: UIViewController {
                 DispatchQueue.main.async {
                         // Display as pop-up text the given marks from before
                         let alert = UIAlertController(title: "Marks",
-                                                      message: "\n\(i.title!)\nInnovation: \(i.innovation!)" +
-                                                               "\nInspiration: \(i.inspiration!):" +
+                                                      message: "\n\(i.title!)\nInspiration: \(i.inspiration!)" +
+                                                               "\nInnovation: \(i.innovation!):" +
                                                                "\nEntrepreneurship: \(i.enterp!)" +
                                                                "\nTeamwork: \(i.teamwork!)",
                                                       preferredStyle: .alert)
@@ -43,7 +44,19 @@ class listDetailsVC: UIViewController {
                         alert.addAction(cancel)
                         self.present(alert, animated: true, completion: nil)
                 }
+                
+                isFound = true
             }
+        }
+        
+        if isFound != true {
+            let alert = UIAlertController(title: "",message: "\nThis project is not yet marked.",preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Back", style: .destructive, handler: { (action) -> Void in })
+            
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
         
