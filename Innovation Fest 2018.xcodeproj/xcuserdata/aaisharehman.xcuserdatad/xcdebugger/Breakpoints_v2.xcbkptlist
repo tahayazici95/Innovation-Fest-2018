@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Innovation Fest 2018/listDetailsVC.swift"
-            timestampString = "542055031.992198"
+            timestampString = "543158570.653432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -96,6 +96,22 @@
             startingLineNumber = "63"
             endingLineNumber = "63"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Innovation Fest 2018/navScreenVC.swift"
+            timestampString = "543158570.65364"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "panTopCard(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

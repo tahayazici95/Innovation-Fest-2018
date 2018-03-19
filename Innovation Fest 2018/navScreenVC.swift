@@ -12,9 +12,10 @@ class navScreenVC: UIViewController {
     
     @IBOutlet weak var topCard: UIView!
     @IBOutlet weak var bottomCard: UIView!
+    @IBOutlet weak var leadingShit: NSLayoutConstraint!
     
     var divisor: CGFloat!
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         divisor = (view.frame.width / 2) / 0.61
@@ -39,7 +40,12 @@ class navScreenVC: UIViewController {
                     card.alpha = 0
                 })
                 
-                if card.center.x < 5 { performSegue(withIdentifier: "ShowList", sender: self) }
+                if card.center.x < 5 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
+                        UIView.animate(withDuration: 0.2, animations: { self.resetTopCard() })
+                        self.performSegue(withIdentifier: "ShowList", sender:self)
+                    }
+                }
                 
                 return
             } else if card.center.x > view.frame.width - 75 {
@@ -48,16 +54,18 @@ class navScreenVC: UIViewController {
                     card.alpha = 0
                 })
                 
-                if card.center.x > view.frame.width - 5 { performSegue(withIdentifier: "ShowList", sender: self) }
+                if card.center.x > view.frame.width - 5 {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4 ) {
+                        UIView.animate(withDuration: 0.2, animations: { self.resetTopCard() })
+                        self.performSegue(withIdentifier: "ShowList", sender:self)
+                    }
+                    
+                }
                 
                 return
             }
             
-            UIView.animate(withDuration: 0.2, animations: {
-                card.center.y = 257
-                card.center.x = self.view.center.x
-                card.transform = .identity
-                })
+            UIView.animate(withDuration: 0.2, animations: { self.resetTopCard() })
         }
     }
     
@@ -94,12 +102,22 @@ class navScreenVC: UIViewController {
                 return
             }
             
-            UIView.animate(withDuration: 0.2, animations: {
-                card.center.y = 565
-                card.center.x = self.view.center.x
-                card.transform = .identity
-            })
+            UIView.animate(withDuration: 0.2, animations: { self.resetBottomCard() })
         }
+    }
+    
+    func resetTopCard(){
+        self.topCard.center.y = 257
+        self.topCard.center.x = self.view.center.x
+        self.topCard.transform = .identity
+        self.topCard.alpha = 1
+    }
+    
+    func resetBottomCard(){
+        self.bottomCard.center.y = 565
+        self.bottomCard.center.x = self.view.center.x
+        self.bottomCard.transform = .identity
+        self.bottomCard.alpha = 1
     }
 }
 
