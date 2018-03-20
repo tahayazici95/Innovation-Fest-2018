@@ -12,6 +12,8 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    static var selectedUserIndex: Users?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,6 +59,8 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? listDetailsVC{
             destination.selected_user = ViewController.users[(tableView.indexPathForSelectedRow?.row)!]
+            
+            listVC.selectedUserIndex = ViewController.users[(tableView.indexPathForSelectedRow?.row)!]
         }
     }
 }
