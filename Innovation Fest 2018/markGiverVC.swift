@@ -30,11 +30,8 @@ class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     var inspirationMark = "1"
     
     @IBAction func submissionButton(_ sender: UIButton) {
-        
-        
         if let i = saved_data?.index(where: { $0.title == listDetailsVC.project_title }) {
             CoreDataHandler.deleteObject(saved_p: saved_data![i])
-            
             print("Deleted")
         }
 
@@ -44,6 +41,9 @@ class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
                                    teamwork: teamworkMark,
                                    enterp: enterpMark,
                                    inspiration: inspirationMark)
+        
+        
+        performSegue(withIdentifier: "unWindToDetails", sender: self)
     }
     
     override func viewDidLoad() {

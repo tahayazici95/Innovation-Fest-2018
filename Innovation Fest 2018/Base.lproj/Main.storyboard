@@ -529,9 +529,11 @@
                         <outlet property="textLabel2" destination="bce-hr-trj" id="ooE-Qb-cOh"/>
                         <outlet property="textLabel3" destination="6cM-Zn-LZ3" id="564-Hh-QcM"/>
                         <outlet property="textLabel4" destination="CWl-pq-fvu" id="AGW-iE-3Y9"/>
+                        <segue destination="jln-tN-KUe" kind="unwind" identifier="unWindToDetails" unwindAction="unWindWithSegue:" id="dvN-dx-2zG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZW-mi-RWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jln-tN-KUe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4986.9565217391309" y="28.532608695652176"/>
         </scene>

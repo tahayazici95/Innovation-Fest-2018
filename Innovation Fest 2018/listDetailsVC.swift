@@ -60,7 +60,6 @@ class listDetailsVC: UIViewController {
         }
     }
         
-    
     var selected_user : Users?
     
     static var project_title: String = ""
@@ -68,6 +67,9 @@ class listDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if selected_user == nil { selected_user = listVC.selectedUserIndex
+            
+        }
         var membersString: String = ""
         let membersArray = selected_user?.members.components(separatedBy: ", ")
         for member in membersArray! {
@@ -105,4 +107,6 @@ class listDetailsVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func unWind(segue: UIStoryboardSegue) { }
 }
