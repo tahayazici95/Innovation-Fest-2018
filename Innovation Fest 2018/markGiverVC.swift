@@ -42,6 +42,7 @@ class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
                                    enterp: enterpMark,
                                    inspiration: inspirationMark)
         
+        listDetailsVC.seguePerformed = true
         
         performSegue(withIdentifier: "unWindToDetails", sender: self)
     }
