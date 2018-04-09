@@ -68,7 +68,9 @@ class listDetailsVC: UIViewController {
     static var project_title: String = ""
     
     override func viewWillAppear(_ animated: Bool) {
-       displayPopUp()
+        displayPopUp()
+        
+        listDetailsVC.seguePerformed = false
     }
     
     override func viewDidLoad() {
