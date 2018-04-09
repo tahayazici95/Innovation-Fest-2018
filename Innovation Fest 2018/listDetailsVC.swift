@@ -16,6 +16,10 @@ class listDetailsVC: UIViewController {
     @IBOutlet weak var projectMembers: UILabel!
     @IBOutlet weak var projectDescription: UILabel!
     
+    static var seguePerformed  = false
+    
+    var timer = Timer()
+    
     @IBAction func giveMarksButton(_ sender: UIButton) {
         performSegue(withIdentifier: "giveMarks", sender: self)
     }
@@ -56,14 +60,17 @@ class listDetailsVC: UIViewController {
             
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
-            
         }
     }
         
     var selected_user : Users?
     
     static var project_title: String = ""
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+       displayPopUp()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,6 +111,18 @@ class listDetailsVC: UIViewController {
                         self.projectLogo.image = logo
                     }
                 }
+            }
+        }
+    }
+    
+    func displayPopUp() {
+        if(listDetailsVC.seguePerformed){
+            let alert = UIAlertController(title: "",message: "Marks Submitted!",preferredStyle: .alert)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alert.dismiss(animated: true, completion: nil)
             }
         }
     }
