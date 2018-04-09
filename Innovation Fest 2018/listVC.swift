@@ -56,6 +56,22 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "showDetails", sender: self)
     }
     
+    
+    @IBAction func sendMarksButton(_ sender: UIBarButtonItem) {
+        var saved_data = CoreDataHandler.fetchObject()
+        print(saved_data?.count)
+        if(saved_data?.count != 5)
+        {
+            let alert = UIAlertController(title: "",message: "\nPlease Mark all Projects",preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Back", style: .destructive, handler: { (action) -> Void in })
+            
+            alert.addAction(cancel)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? listDetailsVC{
             destination.selected_user = ViewController.users[(tableView.indexPathForSelectedRow?.row)!]
@@ -63,4 +79,6 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             listVC.selectedUserIndex = ViewController.users[(tableView.indexPathForSelectedRow?.row)!]
         }
     }
+    
+    
 }
