@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="3713" y="411"/>
         </scene>
-        <!--ListVC-->
+        <!--Projects-->
         <scene sceneID="qVL-4O-Dht">
             <objects>
                 <viewController restorationIdentifier="listVC" storyboardIdentifier="listVC" id="R7T-Vx-CA5" customClass="listVC" customModule="Innovation_Fest_2018" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,6 +240,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qW-Kn-Pbd"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Projects" id="GF5-Rb-oOU">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="uJu-fi-S1w">
+                            <connections>
+                                <action selector="sendMarksButton:" destination="R7T-Vx-CA5" id="y8C-ME-YEa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="NP6-xe-qxT" id="Qqx-V8-i3y"/>
                         <segue destination="3Qe-DD-R0z" kind="show" identifier="showDetails" id="FxJ-sg-4Bz"/>
