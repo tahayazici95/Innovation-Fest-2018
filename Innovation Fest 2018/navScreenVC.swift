@@ -48,6 +48,7 @@ class navScreenVC: UIViewController {
                 }
                 
                 return
+                
             } else if card.center.x > view.frame.width - 75 {
                 UIView.animate(withDuration: 0.3, animations: {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
@@ -69,7 +70,7 @@ class navScreenVC: UIViewController {
         }
     }
     
-    // This will be navigation to the Floor Map when I receive the map layout from Rehan
+    // This will be the navigation to the Floor Map when I receive the map layout from Rehan Bhuna
     @IBAction func panBottonCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point = sender.translation(in: view)
@@ -88,16 +89,13 @@ class navScreenVC: UIViewController {
                     card.alpha = 0
                 })
                 
-                // if card.center.x < 05 { performSegue(withIdentifier: "ShowList", sender: self) }
-                
                 return
+                
             } else if card.center.x > view.frame.width - 75 {
                 UIView.animate(withDuration: 0.3, animations: {
                     card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
                     card.alpha = 0
                 })
-                
-                // if card.center.x < 05 { performSegue(withIdentifier: "ShowList", sender: self) }
                 
                 return
             }

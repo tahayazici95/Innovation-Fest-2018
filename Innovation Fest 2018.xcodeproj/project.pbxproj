@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DBF10CB20861E5100DCB522 /* Juries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF10CA20861E5100DCB522 /* Juries.swift */; };
 		F30E78B2200A80E70085C797 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30E78B1200A80E70085C797 /* DesignableTextField.swift */; };
 		F36F2588200C0D3A0027B536 /* listVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2587200C0D3A0027B536 /* listVC.swift */; };
 		F36F258A200C0F8B0027B536 /* projectListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36F2589200C0F8B0027B536 /* projectListTVC.swift */; };
@@ -22,8 +23,8 @@
 		F37B174F1FFE8AC0009D5D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37B174D1FFE8AC0009D5D4E /* LaunchScreen.storyboard */; };
 		F37B175A1FFE8AC0009D5D4E /* Innovation_Fest_2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B17591FFE8AC0009D5D4E /* Innovation_Fest_2018Tests.swift */; };
 		F37B17651FFE8AC0009D5D4E /* Innovation_Fest_2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B17641FFE8AC0009D5D4E /* Innovation_Fest_2018UITests.swift */; };
-		F37B17751FFEAAF9009D5D4E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B17741FFEAAF9009D5D4E /* Users.swift */; };
-		F37B17771FFEADF4009D5D4E /* CheckIfUserExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B17761FFEADF4009D5D4E /* CheckIfUserExists.swift */; };
+		F37B17751FFEAAF9009D5D4E /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B17741FFEAAF9009D5D4E /* Projects.swift */; };
+		F37B17771FFEADF4009D5D4E /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37B17761FFEADF4009D5D4E /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DBF10CA20861E5100DCB522 /* Juries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juries.swift; sourceTree = "<group>"; };
 		F30E78B1200A80E70085C797 /* DesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		F36F2587200C0D3A0027B536 /* listVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listVC.swift; sourceTree = "<group>"; };
 		F36F2589200C0F8B0027B536 /* projectListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectListTVC.swift; sourceTree = "<group>"; };
@@ -65,8 +67,8 @@
 		F37B17601FFE8AC0009D5D4E /* Innovation Fest 2018UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Innovation Fest 2018UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B17641FFE8AC0009D5D4E /* Innovation_Fest_2018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Innovation_Fest_2018UITests.swift; sourceTree = "<group>"; };
 		F37B17661FFE8AC0009D5D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F37B17741FFEAAF9009D5D4E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		F37B17761FFEADF4009D5D4E /* CheckIfUserExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIfUserExists.swift; sourceTree = "<group>"; };
+		F37B17741FFEAAF9009D5D4E /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		F37B17761FFEADF4009D5D4E /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,21 +120,22 @@
 			isa = PBXGroup;
 			children = (
 				F37B17411FFE8AC0009D5D4E /* AppDelegate.swift */,
-				F37B17431FFE8AC0009D5D4E /* ViewController.swift */,
-				F37B17451FFE8AC0009D5D4E /* Main.storyboard */,
-				F36F258D200C529E0027B536 /* markGiverVC.swift */,
-				F36F2589200C0F8B0027B536 /* projectListTVC.swift */,
-				F37638D5200BC766009450C0 /* navScreenVC.swift */,
 				F36F258F200C62570027B536 /* coreData.swift */,
-				F37B17741FFEAAF9009D5D4E /* Users.swift */,
-				F37B17761FFEADF4009D5D4E /* CheckIfUserExists.swift */,
+				F37B17451FFE8AC0009D5D4E /* Main.storyboard */,
+				F37B17431FFE8AC0009D5D4E /* ViewController.swift */,
+				F37638D5200BC766009450C0 /* navScreenVC.swift */,
+				F36F2587200C0D3A0027B536 /* listVC.swift */,
+				F36F2589200C0F8B0027B536 /* projectListTVC.swift */,
+				F36F258B200C317F0027B536 /* listDetailsVC.swift */,
+				F36F258D200C529E0027B536 /* markGiverVC.swift */,
 				F37B174B1FFE8AC0009D5D4E /* Assets.xcassets */,
 				F37B174D1FFE8AC0009D5D4E /* LaunchScreen.storyboard */,
 				F37B17501FFE8AC0009D5D4E /* Info.plist */,
 				F37B17481FFE8AC0009D5D4E /* Innovation_Fest_2018.xcdatamodeld */,
 				F30E78B1200A80E70085C797 /* DesignableTextField.swift */,
-				F36F2587200C0D3A0027B536 /* listVC.swift */,
-				F36F258B200C317F0027B536 /* listDetailsVC.swift */,
+				F37B17761FFEADF4009D5D4E /* Functions.swift */,
+				3DBF10CA20861E5100DCB522 /* Juries.swift */,
+				F37B17741FFEAAF9009D5D4E /* Projects.swift */,
 			);
 			path = "Innovation Fest 2018";
 			sourceTree = "<group>";
@@ -294,14 +297,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F37B17771FFEADF4009D5D4E /* CheckIfUserExists.swift in Sources */,
+				F37B17771FFEADF4009D5D4E /* Functions.swift in Sources */,
 				F37B174A1FFE8AC0009D5D4E /* Innovation_Fest_2018.xcdatamodeld in Sources */,
 				F37B17441FFE8AC0009D5D4E /* ViewController.swift in Sources */,
 				F30E78B2200A80E70085C797 /* DesignableTextField.swift in Sources */,
 				F37638D6200BC766009450C0 /* navScreenVC.swift in Sources */,
-				F37B17751FFEAAF9009D5D4E /* Users.swift in Sources */,
+				F37B17751FFEAAF9009D5D4E /* Projects.swift in Sources */,
 				F37B17421FFE8AC0009D5D4E /* AppDelegate.swift in Sources */,
 				F36F2588200C0D3A0027B536 /* listVC.swift in Sources */,
+				3DBF10CB20861E5100DCB522 /* Juries.swift in Sources */,
 				F36F258C200C317F0027B536 /* listDetailsVC.swift in Sources */,
 				F36F258E200C529E0027B536 /* markGiverVC.swift in Sources */,
 				F36F258A200C0F8B0027B536 /* projectListTVC.swift in Sources */,
