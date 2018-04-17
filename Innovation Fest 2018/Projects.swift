@@ -10,9 +10,8 @@ import Foundation
 import UIKit
 
 // Class storing all relevant information about each Jury
-class Users: Decodable {
-    let username: String
-    let password: String
+class Projects: Decodable {
+    let marker_IDs: [Int]
     let tag: String
     let title: String
     let logo: String
@@ -21,9 +20,8 @@ class Users: Decodable {
     let image: String
     
 	
-    init(username : String, password : String, tag : String, title : String, logo : String, members : String, description : String, image: String) {
-        self.username = username
-        self.password = password
+    init(marker_IDs : [Int], tag : String, title : String, logo : String, members : String, description : String, image: String) {
+        self.marker_IDs = marker_IDs
         self.title = title
         self.description = description
         self.members = members

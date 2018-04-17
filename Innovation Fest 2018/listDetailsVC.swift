@@ -63,7 +63,7 @@ class listDetailsVC: UIViewController {
         }
     }
         
-    var selected_user : Users?
+    var selected_user : Projects?
     
     static var project_title: String = ""
     
