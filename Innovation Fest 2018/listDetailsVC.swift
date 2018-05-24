@@ -111,6 +111,8 @@ class listDetailsVC: UIViewController {
                     let logo = UIImage(data: data)
                     DispatchQueue.main.async {
                         self.projectLogo.image = logo
+                        self.projectLogo.layer.cornerRadius = self.projectLogo.frame.size.width/2
+                        self.projectLogo.clipsToBounds = true
                     }
                 }
             }

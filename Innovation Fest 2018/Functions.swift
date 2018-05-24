@@ -26,10 +26,39 @@ func downloadJSONFile(type: String, completed: @escaping () -> ()) {
     var url: URL?
     
     if type == "juries" {
-        url = URL(string: "https://next.json-generator.com/api/json/get/4yfqu8DXE")
+        
+        let username = "application"
+        let password = "^OaYEHBGrB7Bpidxgyx1VWph9AD3sTjS"
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+        
+        // create the request
+        let url = URL(string: "https://innovationfest.co.uk/users")!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+       
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error == nil {
+                do {
+                    ViewController.juries = try JSONDecoder().decode([Juries].self, from: data!)
+                    print("Juries downloadedv- new stuff")
+                    DispatchQueue.main.async { completed() }
+                    
+                } catch {
+                    print("JSON Error - new stuff")
+                }
+            }
+        }.resume()
+        /*url = URL(string: "https://next.json-generator.com/api/json/get/4yfqu8DXE")
+        
+        
+        
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
             if error == nil {
                 do {
                     ViewController.juries = try JSONDecoder().decode([Juries].self, from: data!)
@@ -39,14 +68,46 @@ func downloadJSONFile(type: String, completed: @escaping () -> ()) {
                     print("JSON Error")
                 }
             }
-        }.resume()
+        }.resume() */
         
     } else {
         
-        url = URL(string: "https://next.json-generator.com/api/json/get/EklYDwNNN")
+        let username = "application"
+        let password = "^OaYEHBGrB7Bpidxgyx1VWph9AD3sTjS"
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+        
+        // create the request
+        let url = URL(string: "https://innovationfest.co.uk/productinfo")!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            print(data)
+            print(response)
+            if error == nil {
+                do {
+                    ViewController.allProjects = try JSONDecoder().decode([Projects].self, from: data!)
+                    print("Projects downloaded- new stuff")
+                    
+                    ViewController.projects = extractProject(belongingTo: Int(type)!)
+                    DispatchQueue.main.async { completed() }
+                    
+                } catch {
+                    print("Project JSON Error  - new stuff")
+                }
+            }
+        }.resume()
+        
+        /*url = URL(string: "https://next.json-generator.com/api/json/get/EklYDwNNN")
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            
+            print(data)
+            print(response)
             if error == nil {
                 do {
                     ViewController.allProjects = try JSONDecoder().decode([Projects].self, from: data!)
@@ -59,7 +120,7 @@ func downloadJSONFile(type: String, completed: @escaping () -> ()) {
                     print("JSON Error")
                 }
             }
-        }.resume()
+        }.resume()*/
     }
 }
 
@@ -71,9 +132,27 @@ func extractProject(belongingTo juryID: Int) -> [Projects] {
     
     for project in ViewController.allProjects {
         
+        var split_marksID = project.marker_IDs.components(separatedBy: ",")
+        split_marksID[0] = split_marksID[0].replacingOccurrences(of: "[", with: "", options: .literal, range: nil)
+        split_marksID[1] = split_marksID[1].replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+        split_marksID[2] = split_marksID[2].replacingOccurrences(of: "]", with: "", options: .literal, range: nil)
+        split_marksID[2] = split_marksID[2].replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+        
+        var ids = [Int(split_marksID[0])!, Int(split_marksID[1])!, Int(split_marksID[2])!]
+        
+//
+//        ids[0] = Int(split_marksID[0])!
+//        ids[1] = Int(split_marksID[1])!
+//        ids[2] = Int(split_marksID[2])!
+        
+        print(ids[0] = Int(split_marksID[0])!)
+        print(ids[1] = Int(split_marksID[1])!)
+        print(ids[2] = Int(split_marksID[2])!)
+        
+ 
         print("Current project", project)
         
-        for markerID in project.marker_IDs {
+        for markerID in ids {
             
             print("ID comparison", markerID, " ", juryID)
             

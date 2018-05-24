@@ -8,8 +8,10 @@
 
 import UIKit
 
-class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
 
+    
+    @IBOutlet weak var feedback_txt: UITextView!
     @IBOutlet weak var textLabel1: UILabel!
     @IBOutlet weak var textLabel2: UILabel!
     @IBOutlet weak var textLabel3: UILabel!
@@ -50,6 +52,7 @@ class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.feedback_txt.delegate = self;
         self.pickerView1.dataSource = self;
         self.pickerView1.delegate = self;
         
@@ -66,6 +69,9 @@ class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         textLabel2.text = "Innovation"
         textLabel3.text = "Entrepreneurship"
         textLabel4.text = "Teamwork"
+        
+        self.feedback_txt.text = "Write your feedback & comments here"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,5 +95,21 @@ class markGiverVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         } else if pickerView == pickerView4 {
             teamworkMark = marks[row]
         }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if feedback_txt.text == "Write your feedback & comments here"
+        {
+            feedback_txt.text = ""
+            feedback_txt.textColor = UIColor.black
+        }
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n"
+        {
+            feedback_txt.resignFirstResponder()
+        }
+        return true
     }
 }

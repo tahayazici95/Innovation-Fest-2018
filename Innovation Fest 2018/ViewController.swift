@@ -9,7 +9,7 @@
 import UIKit
 import UserNotifications
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NSURLConnectionDelegate {
 
     // Declaring objects that will be interacted with
     @IBOutlet weak var usernameTextField: UITextField!
@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //urlpull()
 
         // Request permission to display notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
@@ -76,6 +78,40 @@ class ViewController: UIViewController {
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    func urlpull()
+    {
+        let username = "application"
+        let password = "^OaYEHBGrB7Bpidxgyx1VWph9AD3sTjS"
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+        
+        // create the request
+        let url = URL(string: "https://innovationfest.co.uk/users")!
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        
+
+        //let urlConnection = NSURLConnection(request: request, delegate: self)
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            print(data)
+            print(response)
+            if error == nil {
+                do {
+                    ViewController.juries = try JSONDecoder().decode([Juries].self, from: data!)
+                    print("Juries downloadedv- new stuff")
+                    
+                } catch {
+                    print("JSON Error - new stuff")
+                }
+            }
+            }.resume()
+        
     }
 }
 

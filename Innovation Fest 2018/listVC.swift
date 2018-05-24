@@ -64,7 +64,7 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func sendMarksButton(_ sender: UIBarButtonItem) {
         let saved_data = CoreDataHandler.fetchObject()
         print(saved_data?.count)
-        if(saved_data?.count != 5)
+        if((saved_data?.count)! > 5)
         {
             let alert = UIAlertController(title: "",message: "\nPlease Mark all Projects",preferredStyle: .alert)
             
@@ -72,7 +72,51 @@ class listVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             alert.addAction(cancel)
             self.present(alert, animated: true, completion: nil)
+        }else{
+            
+            let alert = UIAlertController(title: "",message: "\nAll projects are Marked",preferredStyle: .alert)
+            
+            let logout = UIAlertAction(title:"Logout", style: .default, handler: { action in self.performSegue(withIdentifier: "logoutSegue", sender: self)})
+            
+            alert.addAction(logout)
+            
+            self.present(alert, animated: true, completion: nil)
         }
+        
+        
+        let jsonData: [String: String] = ["title":"Encouraging an active lifestyle through mobile technology","marks":"12"]
+        
+        var Jdata = try? JSONSerialization.data(withJSONObject: jsonData)
+         let username = "application"
+         let password = "^OaYEHBGrB7Bpidxgyx1VWph9AD3sTjS"
+         let loginString = String(format: "%@:%@", username, password)
+         let loginData = loginString.data(using: String.Encoding.utf8)!
+         let base64LoginString = loginData.base64EncodedString()
+         
+         // create the request
+        let url = URL(string: "https://innovationfest.co.uk/add_marks")!
+        var request = URLRequest(url: url)
+         
+        request.httpMethod = "POST"
+        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = Jdata
+         
+         
+         URLSession.shared.dataTask(with: request) { (data, response, error) in
+       
+            if error == nil {
+                if let content = data
+                {
+                    do
+                    {
+                        print("here", content)
+                        
+                    }catch{}
+                }
+            }
+         }.resume()
+        
     }
     
     
